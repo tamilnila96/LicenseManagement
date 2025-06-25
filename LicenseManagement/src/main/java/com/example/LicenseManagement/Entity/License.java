@@ -29,10 +29,10 @@ public class License {
 	private int id;
 	@Column(name="organisation_name")
 	@JsonProperty("organisationname")
-	private String  organisation_name;
+	private String  organisationName;
 	@Column(name="organisation_email")
 	@JsonProperty("organisationemail")
-	private String organisation_email;
+	private String organisationEmail;
 	@Column(name="status")
 	private int status;
 	@Column(name="licenseKey")
@@ -53,17 +53,22 @@ public class License {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getOrganisation_name() {
-		return organisation_name;
+	
+	public String getOrganisationName() {
+		return organisationName;
 	}
-	public void setOrganisation_name(String organisation_name) {
-		this.organisation_name = organisation_name;
+	public void setOrganisationName(String organisationName) {
+		this.organisationName = organisationName;
 	}
-	public String getOrganisation_email() {
-		return organisation_email;
+	
+
+	
+	
+	public String getOrganisationEmail() {
+		return organisationEmail;
 	}
-	public void setOrganisation_email(String organisation_email) {
-		this.organisation_email = organisation_email;
+	public void setOrganisationEmail(String organisationEmail) {
+		this.organisationEmail = organisationEmail;
 	}
 	public int getStatus() {
 		return status;

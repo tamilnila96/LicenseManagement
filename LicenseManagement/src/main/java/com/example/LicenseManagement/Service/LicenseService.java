@@ -7,7 +7,7 @@ public interface LicenseService {
 
 
 	
-	License getLicenseKey(String licenseKey);
+	License getLicenseKeyAndOrganisationEmail(String licenseKey,String organisationEmail);
 		
 	}
 

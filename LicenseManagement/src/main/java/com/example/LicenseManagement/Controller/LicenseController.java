@@ -6,10 +6,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.LicenseManagement.Entity.License;
 import com.example.LicenseManagement.Service.LicenseService;
+
 
 @RestController
 @RequestMapping(value="/api")
@@ -22,8 +24,13 @@ public class LicenseController {
 		return licenseservice.create(license);
 		
 	}
-	@GetMapping("/get")
-	 public License findByKey(@PathVariable String licensekey) {
-		return licenseservice.getLicenseKey(licensekey);
+	@GetMapping("/validate/{licenseKey}/{organisationEmail}")
+	public License getLicenseInfo(
+			@PathVariable ("licenseKey") String licenseKey,
+			@PathVariable ("organisationEmail") String organisationEmail)  {
+		return licenseservice.getLicenseKeyAndOrganisationEmail(licenseKey,organisationEmail);
+		
 	}
+	
+
 }

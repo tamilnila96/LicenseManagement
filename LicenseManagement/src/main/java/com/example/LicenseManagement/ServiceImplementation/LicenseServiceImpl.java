@@ -30,8 +30,12 @@ public LicenseRepo licenserepo;
 		}
 		return sb.toString();
 	}
-	public License getLicenseKey(String licensekey) {
-		return licenserepo.findByLicenseKey(licensekey);
+	
+
+	@Override
+	public License getLicenseKeyAndOrganisationEmail(String licenseKey, String organisationEmail) {
+		// TODO Auto-generated method stub
+		 return licenserepo.findByLicenseKeyAndOrganisationEmail(licenseKey,organisationEmail);
 	}
 
 }

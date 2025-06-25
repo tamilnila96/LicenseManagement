@@ -8,6 +8,6 @@ import com.example.LicenseManagement.Entity.License;
 
 public interface LicenseRepo extends JpaRepository<License, Integer> {
 
-	License findByLicenseKey(String licenseKey);
+	License findByLicenseKeyAndOrganisationEmail(String licenseKey, String organisationEmail);
 
 }
