@@ -8,7 +8,12 @@ public interface LicenseService {
 
 	
 	License getLicenseKeyAndOrganisationEmail(String licenseKey,String organisationEmail);
+	String ValidateandActivate(String encrypteLicenseKey,String organisationEmail);
+	String encrypt(String text)throws Exception;
+	String decrypt(String encryptedText)throws Exception;
+}
 		
-	}
+	
+
 
 
